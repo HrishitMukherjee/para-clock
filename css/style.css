@@ -18,9 +18,14 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #253340, #1a2430);
+    background-size: cover; /* This makes sure it fits all screen sizes */
     font-family: Arial, sans-serif;
     color: #cfa14d;
     overflow: hidden;
+}
+body.light-mode {
+    background: linear-gradient(135deg, #cfa14d, #f8e5be);
+    background-size: cover;
 }
 
 .clock-container {
@@ -193,3 +198,28 @@ body.light-mode {
     color: #253340;
 }
 
+}
+
+@media (max-width: 768px) {
+    .clock-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .analog-clock {
+        width: 150px;
+        height: 150px;
+    }
+
+    .digit {
+        font-size: 14px;
+    }
+
+    .digital-time {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
